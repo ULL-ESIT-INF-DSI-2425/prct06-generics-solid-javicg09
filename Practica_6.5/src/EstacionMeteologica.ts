@@ -3,7 +3,7 @@
 * @description Implementa la clase observada del patrón Observer. 
 */
 
-import Dispositivo from "./Dispositivo";
+import {Dispositivo} from "./Dispositivo";
 
 /**
 * Clase que representa una estación meteorológica.

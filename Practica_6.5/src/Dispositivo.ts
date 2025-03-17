@@ -6,7 +6,7 @@
 /**
 * Interfaz que representa un dispositivo que recibe notificaciones.
 */
-export default interface Dispositivo {
+export interface Dispositivo {
     /**
     * Actualiza el estado del dispositivo a partir de un evento y datos opcionales.
     * @param evento Descripción del evento.
