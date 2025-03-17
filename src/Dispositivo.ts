@@ -12,6 +12,6 @@ export interface Dispositivo {
     * @param evento Descripción del evento.
     * @param datos Información relacionada con el evento.
     */
-    actualizar(evento: string, datos?: any): void;
+    actualizar(evento: string, datos: any): void;
 }
   

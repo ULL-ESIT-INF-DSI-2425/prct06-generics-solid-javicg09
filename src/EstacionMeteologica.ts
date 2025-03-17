@@ -3,7 +3,7 @@
 * @description Implementa la clase observada del patrón Observer. 
 */
 
-import {Dispositivo} from "./Dispositivo";
+import {Dispositivo} from "./Dispositivo.js";
 
 /**
 * Clase que representa una estación meteorológica.
@@ -32,9 +32,9 @@ export class EstacionMeteorologica {
   /**
    * Notifica a todos los dispositivos de un evento meteorológico.
    * @param evento Descripción del evento.
-   * @param datos Información adicionalr.
+   * @param datos Información adicional.
    */
-  public notificar(evento: string, datos?: any): void {
+  public notificar(evento: string, datos: any): void {
     for (let i = 0; i < this.dispositivos.length; i++) {
       this.dispositivos[i].actualizar(evento, datos);
     }
