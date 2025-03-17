@@ -5,7 +5,7 @@ import { Dispositivo } from "./Dispositivo.js";
  * @class EstacionMeteorologica
  * @description Implementa la interfaz IEstacion para notificar eventos meteorológicos a sus observadores.
  */
-export default class EstacionMeteorologica implements Estacion {
+export class EstacionMeteorologica implements Estacion {
   private observadores: Dispositivo[] = [];
   private temperatura: number = 0;
 
@@ -18,7 +18,6 @@ export default class EstacionMeteorologica implements Estacion {
   }
 
   public notificar(datos: any): void {
-    // Al notificar, se le pasa a cada observador la instancia de la estación (this) junto con los datos.
     for (let i = 0; i < this.observadores.length; i++) {
       this.observadores[i].actualizar(this, datos);
     }

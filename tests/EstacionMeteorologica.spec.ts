@@ -1,13 +1,13 @@
 import { describe, test, expect } from 'vitest';
-import EstacionMeteorologica from '../src/EstacionMeteologica.js';
-import DispositivoMovil from '../src/DispositivoMovil.js';
+import {EstacionMeteorologica} from '../src/EstacionMeteologica.js';
+import {DispositivoMovil} from '../src/DispositivoMovil.js';
 
 describe('EstacionMeteorologica', () => {
   test('Notifica a todos los dispositivos suscritos al cambio de temperatura', () => {
     const estacion = new EstacionMeteorologica();
     const movil = new DispositivoMovil();
 
-    // Suscribir ambos dispositivos.
+    // Suscribir dispositivos.
     estacion.suscribir(movil);
 
     // Simular cambio de temperatura.
