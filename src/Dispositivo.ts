@@ -1,17 +1,14 @@
+import { Estacion } from "./Estacion.js";
 /**
-* @file Dispositivo.ts
-* @description Interfaz que define los dispositivos observadores.
-*/
-
-/**
-* Interfaz que representa un dispositivo que recibe notificaciones.
-*/
+ * @interface Dispositivo
+ * @description Representa un observador (por ejemplo, un dispositivo) que puede recibir notificaciones de una estación.
+ */
 export interface Dispositivo {
     /**
-    * Actualiza el estado del dispositivo a partir de un evento y datos opcionales.
-    * @param evento Descripción del evento.
-    * @param datos Información relacionada con el evento.
-    */
-    actualizar(evento: string, datos: any): void;
-}
+     * Actualiza el observador a partir de la notificación recibida.
+     * @param observable La entidad observada (por ejemplo, la estación que notifica).
+     * @param datos Datos del evento notificado.
+     */
+    actualizar(observable: Estacion, datos: any): void;
+  }
   
